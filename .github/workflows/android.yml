@@ -33,10 +33,14 @@ jobs:
       run: npm install --prefix frontend
 
     - name: Compile React web app
-      run: npm run build --prefix frontend
+      run: |
+        chmod +x frontend/node_modules/.bin/vite
+        npm run build --prefix frontend
 
     - name: Sync Capacitor project assets
-      run: npx cap sync
+      run: |
+        chmod +x node_modules/.bin/cap
+        npx cap sync
 
     - name: Build Android Debug APK
       run: |
