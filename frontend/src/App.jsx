@@ -1,9 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Capacitor } from '@capacitor/core';
+import { Nodejs } from '@capawesome/capacitor-nodejs';
 import Sidebar from './components/Sidebar';
 import ChatArea from './components/ChatArea';
 import HandshakeConsole from './components/HandshakeConsole';
 
 export default function App() {
+  // Start the embedded Node.js daemon if running natively on mobile
+  useEffect(() => {
+    if (Capacitor.isNativePlatform()) {
+      console.log('[App] Starting native embedded Node.js service...');
+      Nodejs.start()
+        .then(() => console.log('[App] Native Node.js service started.'))
+        .catch(err => console.error('[App] Failed to start native Node.js:', err));
+    }
+  }, []);
+
   const [profile, setProfile] = useState(null);
   const [peers, setPeers] = useState([]);
   const [activePeer, setActivePeer] = useState(null);

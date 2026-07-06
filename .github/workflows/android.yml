@@ -32,6 +32,9 @@ jobs:
     - name: Install frontend dependencies
       run: npm install --prefix frontend
 
+    - name: Install Node.js service dependencies
+      run: npm install --prefix node-project
+
     - name: Compile React web app
       run: |
         chmod +x frontend/node_modules/.bin/vite
