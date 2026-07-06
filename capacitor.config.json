@@ -1,0 +1,8 @@
+{
+  "appId": "com.callofssh.app",
+  "appName": "Call of SSH",
+  "webDir": "frontend/dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}

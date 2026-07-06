@@ -2,15 +2,53 @@
   "name": "call-of-ssh-root",
   "version": "1.0.0",
   "description": "Root workspace for Call of SSH",
+  "main": "electron/main.js",
+  "type": "module",
   "scripts": {
     "install-all": "npm install --prefix daemon && npm install --prefix frontend && npm install --prefix relay",
     "daemon-1": "cross-env PORT=22001 WS_PORT=9001 HTTP_PORT=8001 DB_PATH=./node1_db.json ALIAS=Alice node daemon/index.js",
     "daemon-2": "cross-env PORT=22002 WS_PORT=9002 HTTP_PORT=8002 DB_PATH=./node2_db.json ALIAS=Bob node daemon/index.js",
     "frontend-1": "npm run dev-1 --prefix frontend",
     "frontend-2": "npm run dev-2 --prefix frontend",
-    "relay": "node relay/index.js"
+    "relay": "node relay/index.js",
+    "desktop": "cross-env NODE_ENV=development electron .",
+    "dist": "npm run build --prefix frontend && electron-builder"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "astral-regex": "^2.0.0",
+    "cross-env": "^7.0.3",
+    "electron": "^30.0.9",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.callofssh.messenger",
+    "productName": "Call of SSH",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron/**/*",
+      "daemon/crypto.js",
+      "daemon/db.js",
+      "daemon/network.js",
+      "daemon/index.js",
+      "daemon/node_modules/**/*",
+      "frontend/dist/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "runAfterFinish": true
+    }
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.4.1",
+    "@capacitor/cli": "^8.4.1",
+    "@capacitor/core": "^8.4.1"
   }
 }

@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Production Bundles & Installer Outputs
+dist/
+**/dist/
+frontend/dist/
+out/
+
+# Database & Downloads
+*_db.json
+db.json
+**/downloads/
+daemon/downloads/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS Files
+.DS_Store
+Thumbs.db

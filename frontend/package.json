@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev-1": "cross-env VITE_WS_PORT=9001 VITE_HTTP_PORT=8001 vite --port 3001 --strictPort",
-    "dev-2": "cross-env VITE_WS_PORT=9002 VITE_HTTP_PORT=8002 vite --port 3002 --strictPort"
+    "dev-2": "cross-env VITE_WS_PORT=9002 VITE_HTTP_PORT=8002 vite --port 3002 --strictPort",
+    "build": "vite build"
   },
   "dependencies": {
     "react": "^19.0.0",

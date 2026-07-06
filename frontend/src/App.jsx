@@ -54,7 +54,7 @@ export default function App() {
       console.log('Service Worker registered:', registration);
 
       // 2. Fetch VAPID public key
-      const relayHttpUrl = import.meta.env.VITE_RELAY_HTTP_URL || 'http://localhost:8080';
+      const relayHttpUrl = import.meta.env.VITE_RELAY_HTTP_URL || 'https://call-of-ssh-relay.onrender.com';
       const response = await fetch(`${relayHttpUrl}/vapid-public-key`);
       const { publicKey } = await response.json();
 

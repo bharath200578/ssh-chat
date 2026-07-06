@@ -41,7 +41,7 @@ export class P2PNetwork {
     this.relayUrl = process.env.RELAY_URL || 'ws://localhost:8080';
     
     // Ensure download dir exists
-    this.downloadsDir = './downloads';
+    this.downloadsDir = process.env.DOWNLOADS_DIR || './downloads';
     if (!fs.existsSync(this.downloadsDir)) {
       fs.mkdirSync(this.downloadsDir, { recursive: true });
     }
