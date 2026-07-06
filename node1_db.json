@@ -1,0 +1,294 @@
+{
+  "identity": {
+    "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAHeLROrCO6r0ON0bxPz5jg+LB7iwP1KmuGK5avDUDdkE=\n-----END PUBLIC KEY-----\n",
+    "privateKey": "-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VwBCIEIMeb+gh853q81AWrGZN5YOZ4LPBjZHEDS8uvsQIaBOGi\n-----END PRIVATE KEY-----\n"
+  },
+  "alias": "Alice",
+  "contacts": {
+    "ssh-p2p:4bb9edfd31337d1aabd39cae66f563af": {
+      "peerId": "ssh-p2p:4bb9edfd31337d1aabd39cae66f563af",
+      "alias": "Bob",
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEApgSjxDVS4AI5pW5+S2N/8L3jQ8pK3pE5qQkNZr3GJHk=\n-----END PUBLIC KEY-----\n",
+      "pushSubscription": {
+        "endpoint": "https://updates.push.services.mozilla.com/wpush/v2/gAAAAABqS6D5jYdLfpHu9_ZvFqUoZtdPWnDvn-yLSrUfbO7K4gmjIx5DclX-9jUixncfFaWjEO_BBAQ6yBOoL-d9SmTv_J3ThcG-gBz9Y-bQViF-ZXmXlXSYKDgPxNJZITKbqL1A8sygsrIxWHUclvLAnN0ohziuPcmpzU942ibhVGpV_oTWAYM",
+        "expirationTime": null,
+        "keys": {
+          "auth": "mv4Gpbs4a3DO5Lh-a9YOCg",
+          "p256dh": "BNxEjS4TkW16SP0eMlVZ-ct4rLh82KNQNe9Z5TJtLSrkUDK7oA1f2HbVC5iWnnlUl1s9Jj3ds3GHAHv_ofG_HV0"
+        }
+      },
+      "lastSeen": "2026-07-06T13:39:21.995Z"
+    }
+  },
+  "messages": {
+    "ssh-p2p:4bb9edfd31337d1aabd39cae66f563af": [
+      {
+        "id": "05dea786-cc90-4cee-b065-c292f111a077",
+        "sender": "me",
+        "text": "hi",
+        "file": null,
+        "timestamp": "2026-07-05T15:30:21.973Z"
+      },
+      {
+        "id": "902b0ad1-677c-41aa-972f-b56fe683d04e",
+        "sender": "me",
+        "text": "hey",
+        "file": null,
+        "timestamp": "2026-07-05T15:36:39.104Z"
+      },
+      {
+        "id": "e5506989-b7a1-48b7-b116-b796aa6ed84b",
+        "sender": "ssh-p2p:4bb9edfd31337d1aabd39cae66f563af",
+        "text": "say",
+        "file": null,
+        "timestamp": "2026-07-05T15:36:47.828Z"
+      },
+      {
+        "id": "beb437c9-d337-4bdb-9975-d6786a53a5ce",
+        "sender": "ssh-p2p:4bb9edfd31337d1aabd39cae66f563af",
+        "text": "more",
+        "file": null,
+        "timestamp": "2026-07-05T15:37:04.859Z"
+      },
+      {
+        "id": "9ebbe44e-3ea6-4bbe-b89a-cf9a7ca6bb27",
+        "sender": "ssh-p2p:4bb9edfd31337d1aabd39cae66f563af",
+        "text": "hi",
+        "file": null,
+        "timestamp": "2026-07-05T15:37:13.818Z"
+      },
+      {
+        "id": "07ad7025-40d5-48e6-a14f-e42f2466495b",
+        "sender": "ssh-p2p:4bb9edfd31337d1aabd39cae66f563af",
+        "text": "jai",
+        "file": null,
+        "timestamp": "2026-07-05T15:37:21.195Z"
+      },
+      {
+        "id": "ba513a4a-55ff-491e-a2c6-18f99a20f2a3",
+        "sender": "ssh-p2p:4bb9edfd31337d1aabd39cae66f563af",
+        "text": "ram",
+        "file": null,
+        "timestamp": "2026-07-05T15:37:31.179Z"
+      },
+      {
+        "id": "060face2-2f4e-430c-9d60-2ad947f60020",
+        "sender": "me",
+        "text": "hi",
+        "file": null,
+        "timestamp": "2026-07-05T15:40:00.626Z"
+      },
+      {
+        "id": "d38bc79a-fce6-4a36-b77b-ae1c5e9632c8",
+        "sender": "ssh-p2p:4bb9edfd31337d1aabd39cae66f563af",
+        "text": "yup",
+        "file": null,
+        "timestamp": "2026-07-05T15:40:06.243Z"
+      },
+      {
+        "id": "7dd9cfd4-3e00-4b1c-834d-0c4bf23b2e60",
+        "sender": "me",
+        "text": "rey",
+        "file": null,
+        "timestamp": "2026-07-05T15:40:14.532Z"
+      },
+      {
+        "id": "aed92957-e37a-4b75-af94-424bcfa57d13",
+        "sender": "ssh-p2p:4bb9edfd31337d1aabd39cae66f563af",
+        "text": "hi",
+        "file": null,
+        "timestamp": "2026-07-05T15:40:35.579Z"
+      },
+      {
+        "id": "36648308-b854-49ac-971b-95b353cfd4c6",
+        "sender": "me",
+        "text": "hi",
+        "file": null,
+        "timestamp": "2026-07-05T15:40:39.132Z"
+      },
+      {
+        "id": "1c1b6ea7-f435-44cc-b929-a406e60fa42a",
+        "sender": "me",
+        "text": "rey",
+        "file": null,
+        "timestamp": "2026-07-05T15:45:28.748Z"
+      },
+      {
+        "id": "9f48160a-9952-4a37-9945-e97f9c72d430",
+        "sender": "me",
+        "text": "Sent file: Screenshot (1).png",
+        "file": {
+          "name": "Screenshot (1).png",
+          "size": 206971,
+          "type": "image/png",
+          "url": "http://localhost:8001/files/1783266481929-sent-Screenshot__1_.png",
+          "localPath": "downloads\\1783266481929-sent-Screenshot__1_.png"
+        },
+        "timestamp": "2026-07-05T15:48:01.931Z"
+      },
+      {
+        "id": "f0c3fc41-d499-4840-b50d-db1f733ab534",
+        "sender": "me",
+        "text": "Sent file: Recording 2026-07-05 211145.mp4",
+        "file": {
+          "name": "Recording 2026-07-05 211145.mp4",
+          "size": 6702708,
+          "type": "video/mp4",
+          "url": "http://localhost:8001/files/1783266826097-sent-Recording_2026-07-05_211145.mp4",
+          "localPath": "downloads\\1783266826097-sent-Recording_2026-07-05_211145.mp4"
+        },
+        "timestamp": "2026-07-05T15:53:46.107Z"
+      },
+      {
+        "id": "b918c346-314b-4660-b11d-a9c1ff36f6be",
+        "sender": "ssh-p2p:4bb9edfd31337d1aabd39cae66f563af",
+        "text": "hey",
+        "file": null,
+        "timestamp": "2026-07-06T12:28:55.163Z"
+      },
+      {
+        "id": "06cd3459-e907-4d61-bc64-54eb8dd34398",
+        "sender": "me",
+        "text": "rry",
+        "file": null,
+        "timestamp": "2026-07-06T12:46:48.177Z"
+      },
+      {
+        "id": "91e916f7-c4dc-4ed6-a060-47d0e3bd4b36",
+        "sender": "me",
+        "text": "rey",
+        "file": null,
+        "timestamp": "2026-07-06T12:52:38.170Z"
+      },
+      {
+        "id": "fb332a59-6057-47ed-91b4-dc72c9f4220b",
+        "sender": "me",
+        "text": "hi",
+        "file": null,
+        "timestamp": "2026-07-06T12:56:59.071Z"
+      },
+      {
+        "id": "f86287fa-60d5-4377-bb56-d320baf1c172",
+        "sender": "ssh-p2p:4bb9edfd31337d1aabd39cae66f563af",
+        "text": "rey",
+        "file": null,
+        "timestamp": "2026-07-06T12:57:07.996Z"
+      },
+      {
+        "id": "e1cbb5d6-5ae6-452a-ac08-5dce04f1afea",
+        "sender": "me",
+        "text": "hey?",
+        "file": null,
+        "timestamp": "2026-07-06T12:57:33.908Z"
+      },
+      {
+        "id": "1d2ed468-cc33-4d9b-903b-464f49bf87e9",
+        "sender": "ssh-p2p:4bb9edfd31337d1aabd39cae66f563af",
+        "text": "d",
+        "file": null,
+        "timestamp": "2026-07-06T13:14:57.611Z"
+      },
+      {
+        "id": "d1a27fbb-b4e2-4534-8486-aaaa366c832c",
+        "sender": "me",
+        "text": "hey",
+        "file": null,
+        "timestamp": "2026-07-06T13:20:47.074Z"
+      },
+      {
+        "id": "9efe4815-3cfb-4877-a5da-2c7c19f7a2b9",
+        "sender": "me",
+        "text": "rey",
+        "file": null,
+        "timestamp": "2026-07-06T13:27:36.396Z"
+      },
+      {
+        "id": "e5695f59-86b5-4401-b52c-360e395cd948",
+        "sender": "me",
+        "text": "ga",
+        "file": null,
+        "timestamp": "2026-07-06T13:27:37.395Z"
+      },
+      {
+        "id": "cd8feb69-d196-4b87-bf23-210f2a1cfc48",
+        "sender": "ssh-p2p:4bb9edfd31337d1aabd39cae66f563af",
+        "text": "ha",
+        "file": null,
+        "timestamp": "2026-07-06T13:27:45.439Z"
+      },
+      {
+        "id": "bad874e7-7f33-46a9-97d7-6fe08cb4ac46",
+        "sender": "me",
+        "text": "yup",
+        "file": null,
+        "timestamp": "2026-07-06T13:27:58.607Z"
+      },
+      {
+        "id": "7cb87588-2eb0-4974-89d7-b1f66a773792",
+        "sender": "me",
+        "text": "asi",
+        "file": null,
+        "timestamp": "2026-07-06T13:28:53.474Z"
+      },
+      {
+        "id": "858c24b3-932f-46d7-b224-81a83b22e8d2",
+        "sender": "ssh-p2p:4bb9edfd31337d1aabd39cae66f563af",
+        "text": "dsad",
+        "file": null,
+        "timestamp": "2026-07-06T13:29:03.315Z"
+      }
+    ],
+    "manual:127.0.0.1:22002": [
+      {
+        "id": "7a120a92-d252-4ca1-950a-b2d79abc6c9a",
+        "sender": "me",
+        "text": "hi",
+        "file": null,
+        "timestamp": "2026-07-06T12:43:14.046Z"
+      },
+      {
+        "id": "850e0ad1-e518-4422-bfec-e48ca566344f",
+        "sender": "me",
+        "text": "rey",
+        "file": null,
+        "timestamp": "2026-07-06T12:44:12.931Z"
+      },
+      {
+        "id": "2b835469-997a-4f15-8075-f46367d3b8f8",
+        "sender": "me",
+        "text": "h",
+        "file": null,
+        "timestamp": "2026-07-06T12:47:06.040Z"
+      },
+      {
+        "id": "082f856c-1af0-48cf-af1e-f4758fe03719",
+        "sender": "me",
+        "text": "hey",
+        "file": null,
+        "timestamp": "2026-07-06T12:52:27.858Z"
+      },
+      {
+        "id": "ffd514b7-2bf0-41fb-9cb7-7288326fbe8f",
+        "sender": "me",
+        "text": "sa",
+        "file": null,
+        "timestamp": "2026-07-06T13:14:44.218Z"
+      },
+      {
+        "id": "2d5360d3-9089-435b-a79d-e5a89ab92e0a",
+        "sender": "me",
+        "text": "rey",
+        "file": null,
+        "timestamp": "2026-07-06T13:15:06.916Z"
+      }
+    ]
+  },
+  "pushSubscription": {
+    "endpoint": "https://updates.push.services.mozilla.com/wpush/v2/gAAAAABqS6D6dx2BvuFq_AysTPVpD-3EoZk4VhjQWpiW-Ph9sWMeHL9wX5n5KOi-LCXYCpdcyD5UikznhdgDHHh6mLcvm3sDXXIlKzQjNAKlV0bMKdNKfWLzJY84jhIfzipXrqUALw0aQcmOKZTdtVNkP903kW65KURavwNzmRoqUC3elqJfGMY",
+    "expirationTime": null,
+    "keys": {
+      "auth": "mRcqhTNps7xO-wXS3zr8tw",
+      "p256dh": "BISgG5Caprkk1WD_IOT0Fn3vEuxybm1HwcQJSLT8FLDbBSkSUtSLMMb4ysipZvUbs1pPmTeUE8C846rpDw8sJbg"
+    }
+  }
+}

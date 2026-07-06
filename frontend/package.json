@@ -1,0 +1,19 @@
+{
+  "name": "call-of-ssh-frontend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev-1": "cross-env VITE_WS_PORT=9001 VITE_HTTP_PORT=8001 vite --port 3001 --strictPort",
+    "dev-2": "cross-env VITE_WS_PORT=9002 VITE_HTTP_PORT=8002 vite --port 3002 --strictPort"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "lucide-react": "^0.475.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "cross-env": "^7.0.3",
+    "vite": "^6.2.0"
+  }
+}
