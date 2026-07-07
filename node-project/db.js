@@ -3,7 +3,8 @@ import path from 'path';
 
 class LocalDatabase {
   constructor() {
-    this.filePath = process.env.DB_PATH || './db.json';
+    const defaultDbPath = process.env.TMPDIR ? path.join(process.env.TMPDIR, 'node_db.json') : './db.json';
+    this.filePath = process.env.DB_PATH || defaultDbPath;
     this.data = {
       identity: null,
       alias: process.env.ALIAS || 'Peer',
