@@ -6,8 +6,8 @@
     "androidScheme": "https"
   },
   "plugins": {
-    "NodeJS": {
-      "nodeDir": "node-project"
+    "Nodejs": {
+      "nodeDir": "nodejs"
     }
   }
 }

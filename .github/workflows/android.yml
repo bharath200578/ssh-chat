@@ -33,7 +33,7 @@ jobs:
       run: npm install --prefix frontend
 
     - name: Install Node.js service dependencies
-      run: npm install --prefix node-project
+      run: npm install --prefix nodejs
 
     - name: Compile React web app
       run: |
