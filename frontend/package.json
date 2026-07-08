@@ -5,7 +5,7 @@
   "scripts": {
     "dev-1": "cross-env VITE_WS_PORT=9001 VITE_HTTP_PORT=8001 vite --port 3001 --strictPort",
     "dev-2": "cross-env VITE_WS_PORT=9002 VITE_HTTP_PORT=8002 vite --port 3002 --strictPort",
-    "build": "vite build"
+    "build": "vite build && node -e \"const fs = require('fs'); fs.cpSync('../nodejs', './dist/nodejs', { recursive: true });\""
   },
   "dependencies": {
     "@capacitor/core": "^8.4.1",
