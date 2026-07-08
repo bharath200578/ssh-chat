@@ -39,7 +39,7 @@ export class P2PNetwork {
     this.tcpServer = null;
     this.udpSocket = null;
     this.relayWs = null;
-    this.relayUrl = process.env.RELAY_URL || 'wss://call-of-ssh-relay.onrender.com';
+    this.relayUrl = process.env.RELAY_URL || 'wss://ssh-chat-34qo.onrender.com';
     
     // Ensure download dir exists
     this.downloadsDir = process.env.DOWNLOADS_DIR || './downloads';

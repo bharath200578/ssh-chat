@@ -39,6 +39,13 @@
       "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAjsx4dy1nYhDrmfNRwt63fo93QQ14nOBJPEJ5atjpO2o=\n-----END PUBLIC KEY-----\n",
       "pushSubscription": null,
       "lastSeen": "2026-07-08T10:36:38.985Z"
+    },
+    "ssh-p2p:7044973228fa82598e9c88da5c92a797": {
+      "peerId": "ssh-p2p:7044973228fa82598e9c88da5c92a797",
+      "alias": "Peer",
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAKG9pgfS4cwCjwHRCIB1cbsCkUF1LMO/5RqpfyZoRLTA=\n-----END PUBLIC KEY-----\n",
+      "pushSubscription": null,
+      "lastSeen": "2026-07-08T10:55:10.825Z"
     }
   },
   "messages": {
@@ -384,6 +391,28 @@
         "text": "Gah",
         "file": null,
         "timestamp": "2026-07-08T10:36:33.147Z"
+      }
+    ],
+    "ssh-p2p:7044973228fa82598e9c88da5c92a797": [
+      {
+        "id": "fbb3f2a8-cbbc-459b-8809-22a52d151d9f",
+        "sender": "ssh-p2p:7044973228fa82598e9c88da5c92a797",
+        "text": "Hi",
+        "file": null,
+        "timestamp": "2026-07-08T10:54:21.844Z"
+      },
+      {
+        "id": "f4661d7e-de18-4542-bf0d-399866acc222",
+        "sender": "me",
+        "text": "Sent file: Screenshot (1).png",
+        "file": {
+          "name": "Screenshot (1).png",
+          "size": 206971,
+          "type": "image/png",
+          "url": "http://localhost:8001/files/1783508089896-sent-Screenshot__1_.png",
+          "localPath": "downloads\\1783508089896-sent-Screenshot__1_.png"
+        },
+        "timestamp": "2026-07-08T10:54:49.899Z"
       }
     ]
   },
