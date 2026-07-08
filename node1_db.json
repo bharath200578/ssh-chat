@@ -25,6 +25,13 @@
       "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAYi3oYDxmS6zohQAU3FX0HmajxEkhtWBaSug2Cwq2oJw=\n-----END PUBLIC KEY-----\n",
       "pushSubscription": null,
       "lastSeen": "2026-07-08T10:09:24.559Z"
+    },
+    "ssh-p2p:abf93a638b08685ccf57e2acef284d3a": {
+      "peerId": "ssh-p2p:abf93a638b08685ccf57e2acef284d3a",
+      "alias": "Peer",
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAH1NAzUvozJ2Qm0kH6/alWFTFXMBFwp9qMUlNqIWTz7Q=\n-----END PUBLIC KEY-----\n",
+      "pushSubscription": null,
+      "lastSeen": "2026-07-08T10:19:52.912Z"
     }
   },
   "messages": {
@@ -303,6 +310,50 @@
         "text": "Jai",
         "file": null,
         "timestamp": "2026-07-08T10:04:33.246Z"
+      }
+    ],
+    "ssh-p2p:abf93a638b08685ccf57e2acef284d3a": [
+      {
+        "id": "7bce5179-d23e-4ff4-8feb-87535c9f59f2",
+        "sender": "me",
+        "text": "hi",
+        "file": null,
+        "timestamp": "2026-07-08T10:18:13.777Z"
+      },
+      {
+        "id": "ccdf26b5-ce8b-4618-a2d6-bd9efe22c857",
+        "sender": "ssh-p2p:abf93a638b08685ccf57e2acef284d3a",
+        "text": "Hi",
+        "file": null,
+        "timestamp": "2026-07-08T10:18:23.369Z"
+      },
+      {
+        "id": "41573e0a-b11c-42de-893b-3f34f37b7513",
+        "sender": "ssh-p2p:abf93a638b08685ccf57e2acef284d3a",
+        "text": "Hey",
+        "file": null,
+        "timestamp": "2026-07-08T10:18:32.290Z"
+      },
+      {
+        "id": "acbdb509-4736-404c-a37c-b7856f8f5a34",
+        "sender": "ssh-p2p:abf93a638b08685ccf57e2acef284d3a",
+        "text": "Jsi",
+        "file": null,
+        "timestamp": "2026-07-08T10:18:36.596Z"
+      },
+      {
+        "id": "d1fc2948-c693-43f9-96c1-3ba41985b16d",
+        "sender": "ssh-p2p:abf93a638b08685ccf57e2acef284d3a",
+        "text": "Hkr",
+        "file": null,
+        "timestamp": "2026-07-08T10:18:38.839Z"
+      },
+      {
+        "id": "e8bd8855-c311-4a46-8270-d2afeff230f3",
+        "sender": "ssh-p2p:abf93a638b08685ccf57e2acef284d3a",
+        "text": "Hu",
+        "file": null,
+        "timestamp": "2026-07-08T10:19:08.729Z"
       }
     ]
   },

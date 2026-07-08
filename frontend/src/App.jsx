@@ -353,7 +353,7 @@ export default function App() {
         onToggleConsole={() => setShowConsole(!showConsole)}
         showConsole={showConsole}
       />
-      <HandshakeConsole logs={handshakeLogs} activePeer={activePeer} />
+      <HandshakeConsole logs={handshakeLogs} activePeer={activePeer} onClose={() => setShowConsole(false)} />
     </main>
   );
 }

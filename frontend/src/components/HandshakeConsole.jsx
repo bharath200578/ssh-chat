@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
-import { Terminal, ShieldAlert } from 'lucide-react';
+import { Terminal, ShieldAlert, X } from 'lucide-react';
 
-export default function HandshakeConsole({ logs, activePeer }) {
+export default function HandshakeConsole({ logs, activePeer, onClose }) {
   const consoleEndRef = useRef(null);
 
   useEffect(() => {
@@ -13,9 +13,30 @@ export default function HandshakeConsole({ logs, activePeer }) {
 
   return (
     <section className="security-console">
-      <header className="console-header">
-        <Terminal size={18} />
-        <h3>Security Console</h3>
+      <header className="console-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          <Terminal size={18} />
+          <h3>Security Console</h3>
+        </div>
+        <button 
+          onClick={onClose} 
+          style={{ 
+            background: 'none', 
+            border: 'none', 
+            color: 'var(--text-dark)', 
+            cursor: 'pointer',
+            padding: 4,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            transition: 'color 0.2s'
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary)'}
+          onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-dark)'}
+          title="Close Console"
+        >
+          <X size={18} />
+        </button>
       </header>
 
       <div className="console-logs">

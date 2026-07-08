@@ -3,6 +3,7 @@ import dgram from 'dgram';
 import fs from 'fs';
 import path from 'path';
 import WebSocket from 'ws';
+import crypto from 'crypto';
 import db from './db.js';
 import {
   getFingerprint,

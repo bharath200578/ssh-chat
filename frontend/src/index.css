@@ -800,4 +800,46 @@ body {
   .app-container.console-closed .security-console {
     transform: translateX(100%);
   }
+
+  /* Compact mobile chat spacing optimizations */
+  .chat-messages {
+    padding: 12px 14px !important;
+    gap: 10px !important;
+  }
+  
+  .message-bubble {
+    max-width: 88% !important;
+    padding: 10px 14px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .message-media img, .message-media video {
+    max-height: 200px !important;
+  }
+
+  .chat-input-bar {
+    padding: 10px 12px !important;
+  }
+
+  .chat-header {
+    height: 60px !important;
+    padding: 0 12px !important;
+  }
+
+  .chat-header-text span {
+    max-width: 120px !important;
+    font-size: 0.72rem !important;
+  }
+
+  .secured-badge {
+    padding: 4px 8px !important;
+    font-size: 0.72rem !important;
+  }
+
+  /* Hide E2EE badge text on narrow screens to fit toggle buttons */
+  @media (max-width: 480px) {
+    .secured-badge {
+      display: none !important;
+    }
+  }
 }

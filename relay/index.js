@@ -50,6 +50,9 @@ const httpServer = http.createServer((req, res) => {
   if (parsedUrl.pathname === '/vapid-public-key' && req.method === 'GET') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ publicKey: vapidKeys.publicKey }));
+  } else if (parsedUrl.pathname === '/' || parsedUrl.pathname === '/healthz') {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Relay Server is Online');
   } else {
     res.writeHead(404);
     res.end('Not found');
