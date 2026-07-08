@@ -315,6 +315,14 @@ export default function App() {
     });
   };
 
+  const handleAddContact = (peerId, alias) => {
+    sendWsCmd({
+      type: 'ADD_CONTACT',
+      peerId,
+      alias
+    });
+  };
+
   const handleSelectPeer = (peer) => {
     setActivePeer(peer);
     if ('Notification' in window && Notification.permission === 'default') {
@@ -333,6 +341,7 @@ export default function App() {
         setActivePeer={handleSelectPeer}
         onUpdateAlias={handleUpdateAlias}
         onManualConnect={handleManualConnect}
+        onAddContact={handleAddContact}
       />
       <ChatArea
         activePeer={activePeer}

@@ -19,6 +19,11 @@ export default function Sidebar({
   const [manualPort, setManualPort] = useState('');
   const [manualAlias, setManualAlias] = useState('');
 
+  // Add Contact by Peer ID form
+  const [showAddContactForm, setShowAddContactForm] = useState(false);
+  const [contactPeerId, setContactPeerId] = useState('');
+  const [contactAlias, setContactAlias] = useState('');
+
   const copyPeerId = () => {
     if (!profile?.peerId) return;
     navigator.clipboard.writeText(profile.peerId);
@@ -52,6 +57,19 @@ export default function Sidebar({
     setManualPort('');
     setManualAlias('');
     setShowManualForm(false);
+  };
+
+  const handleAddContactSubmit = (e) => {
+    e.preventDefault();
+    if (!contactPeerId.trim()) return;
+
+    if (onAddContact) {
+      onAddContact(contactPeerId.trim(), contactAlias.trim());
+    }
+
+    setContactPeerId('');
+    setContactAlias('');
+    setShowAddContactForm(false);
   };
 
   return (
@@ -93,10 +111,13 @@ export default function Sidebar({
         </div>
       </div>
 
-      {/* Manual Connection Trigger */}
-      <div style={{ padding: '12px 24px', borderBottom: '1px solid var(--border-color)' }}>
+      {/* Manual Connection & Add Contact Actions */}
+      <div style={{ padding: '12px 24px', borderBottom: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column', gap: 8 }}>
         <button
-          onClick={() => setShowManualForm(!showManualForm)}
+          onClick={() => {
+            setShowManualForm(!showManualForm);
+            setShowAddContactForm(false);
+          }}
           style={{
             width: '100%',
             background: showManualForm ? 'rgba(255,255,255,0.05)' : 'rgba(0, 240, 255, 0.08)',
@@ -117,8 +138,33 @@ export default function Sidebar({
           {showManualForm ? 'Cancel Manual Connect' : 'Connect via IP/Port'}
         </button>
 
+        <button
+          onClick={() => {
+            setShowAddContactForm(!showAddContactForm);
+            setShowManualForm(false);
+          }}
+          style={{
+            width: '100%',
+            background: showAddContactForm ? 'rgba(255,255,255,0.05)' : 'rgba(0, 240, 255, 0.08)',
+            border: '1px dashed var(--border-glow)',
+            color: 'var(--text-main)',
+            padding: '8px 12px',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            fontSize: '0.85rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 8,
+            transition: 'var(--transition-fast)'
+          }}
+        >
+          <User size={14} />
+          {showAddContactForm ? 'Cancel Add Contact' : 'Add Friend by Peer ID'}
+        </button>
+
         {showManualForm && (
-          <form onSubmit={handleManualDial} style={{ marginTop: 12, display: 'flex', flexDirection: 'column', gap: 8 }}>
+          <form onSubmit={handleManualDial} style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             <input
               type="text"
               placeholder="IP Address (e.g. 127.0.0.1)"
@@ -159,6 +205,43 @@ export default function Sidebar({
               }}
             >
               Dial Node
+            </button>
+          </form>
+        )}
+
+        {showAddContactForm && (
+          <form onSubmit={handleAddContactSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <input
+              type="text"
+              placeholder="Peer ID (ssh-p2p:...)"
+              value={contactPeerId}
+              onChange={(e) => setContactPeerId(e.target.value)}
+              className="alias-edit-input"
+              style={{ margin: 0 }}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Nickname"
+              value={contactAlias}
+              onChange={(e) => setContactAlias(e.target.value)}
+              className="alias-edit-input"
+              style={{ margin: 0 }}
+            />
+            <button
+              type="submit"
+              style={{
+                background: 'var(--color-primary)',
+                color: '#000',
+                border: 'none',
+                padding: '6px 12px',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontWeight: 600,
+                fontSize: '0.85rem'
+              }}
+            >
+              Add Contact
             </button>
           </form>
         )}

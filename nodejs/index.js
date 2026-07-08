@@ -203,6 +203,34 @@ async function handleWsCommand(ws, cmd) {
       break;
     }
 
+    case 'ADD_CONTACT': {
+      const { peerId, alias } = cmd;
+      db.saveContact(peerId, alias || peerId.substring(0, 12));
+      
+      const contacts = db.getContacts().map(c => ({
+        peerId: c.peerId,
+        alias: c.alias,
+        online: p2p.discoveredPeers[c.peerId] ? true : false,
+        ip: p2p.discoveredPeers[c.peerId]?.ip || null,
+        port: p2p.discoveredPeers[c.peerId]?.port || null
+      }));
+      
+      const discovered = Object.values(p2p.discoveredPeers).map(p => ({
+        peerId: p.peerId,
+        alias: p.alias,
+        online: true,
+        ip: p.ip,
+        port: p.port
+      }));
+
+      const mergedMap = new Map();
+      contacts.forEach(c => mergedMap.set(c.peerId, c));
+      discovered.forEach(d => mergedMap.set(d.peerId, d));
+      
+      sendResponse('PEER_LIST', Array.from(mergedMap.values()));
+      break;
+    }
+
     case 'GET_MESSAGES':
       sendResponse('MESSAGE_HISTORY', {
         peerId: cmd.peerId,

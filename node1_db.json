@@ -18,6 +18,13 @@
         }
       },
       "lastSeen": "2026-07-06T13:39:21.995Z"
+    },
+    "ssh-p2p:4d26afa009d64b12ccee52671bff89a1": {
+      "peerId": "ssh-p2p:4d26afa009d64b12ccee52671bff89a1",
+      "alias": "Peer",
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAYi3oYDxmS6zohQAU3FX0HmajxEkhtWBaSug2Cwq2oJw=\n-----END PUBLIC KEY-----\n",
+      "pushSubscription": null,
+      "lastSeen": "2026-07-08T10:09:24.559Z"
     }
   },
   "messages": {
@@ -280,6 +287,22 @@
         "text": "rey",
         "file": null,
         "timestamp": "2026-07-06T13:15:06.916Z"
+      }
+    ],
+    "ssh-p2p:4d26afa009d64b12ccee52671bff89a1": [
+      {
+        "id": "9721c2c0-bf82-4037-9cec-a48f820399ab",
+        "sender": "ssh-p2p:4d26afa009d64b12ccee52671bff89a1",
+        "text": "Hi",
+        "file": null,
+        "timestamp": "2026-07-08T10:03:51.783Z"
+      },
+      {
+        "id": "7bf1df9c-fc38-4c44-ba7d-c1c53e47b137",
+        "sender": "ssh-p2p:4d26afa009d64b12ccee52671bff89a1",
+        "text": "Jai",
+        "file": null,
+        "timestamp": "2026-07-08T10:04:33.246Z"
       }
     ]
   },
