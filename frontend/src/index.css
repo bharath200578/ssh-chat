@@ -40,6 +40,7 @@ body {
   color: var(--text-main);
   font-family: var(--font-sans);
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -54,7 +55,7 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
@@ -65,7 +66,9 @@ body {
   display: grid;
   grid-template-columns: 320px 1fr 340px;
   height: 100vh;
+  height: 100dvh;
   width: 100vw;
+  width: 100dvw;
   backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
@@ -445,6 +448,7 @@ body {
   padding: 16px 24px;
   border-top: 1px solid var(--border-color);
   background: rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
 }
 
 .file-progress-container {
