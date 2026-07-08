@@ -1,3 +1,20 @@
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+try {
+  const bridge = require('bridge');
+  bridge.channel.on('message', (msg) => {
+    console.log('[Node] Message from WebView:', msg);
+  });
+  process.on('uncaughtException', (err) => {
+    try {
+      bridge.channel.send('error', { message: err.message, stack: err.stack });
+    } catch (e) {}
+    console.error('[Node Uncaught Exception]:', err);
+  });
+} catch (e) {
+  console.log('[Node] Capawesome bridge not available.');
+}
+
 import { WebSocketServer } from 'ws';
 import http from 'http';
 import fs from 'fs';

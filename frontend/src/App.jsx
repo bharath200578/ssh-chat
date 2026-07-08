@@ -11,8 +11,19 @@ export default function App() {
     if (Capacitor.isNativePlatform()) {
       console.log('[App] Starting native embedded Node.js service...');
       Nodejs.start()
-        .then(() => console.log('[App] Native Node.js service started.'))
-        .catch(err => console.error('[App] Failed to start native Node.js:', err));
+        .then(() => {
+          console.log('[App] Native Node.js service started.');
+          // Listen for error messages from the background Node.js process
+          Nodejs.addListener('message', (event) => {
+            if (event.eventName === 'error') {
+              alert(`[Node Daemon Error]\n\n${event.args[0].message}\n\n${event.args[0].stack}`);
+            }
+          });
+        })
+        .catch(err => {
+          console.error('[App] Failed to start native Node.js:', err);
+          alert('Failed to start Node.js: ' + err.message);
+        });
     }
   }, []);
 
